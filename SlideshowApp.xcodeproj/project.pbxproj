@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09096C0726C2581E00917CA3 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09096C0626C2581E00917CA3 /* ZoomViewController.swift */; };
 		0917F5BB26C22B27008D959E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0917F5BA26C22B27008D959E /* AppDelegate.swift */; };
 		0917F5BD26C22B27008D959E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0917F5BC26C22B27008D959E /* SceneDelegate.swift */; };
 		0917F5BF26C22B27008D959E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0917F5BE26C22B27008D959E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09096C0626C2581E00917CA3 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 		0917F5B726C22B27008D959E /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0917F5BA26C22B27008D959E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0917F5BC26C22B27008D959E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				0917F5BC26C22B27008D959E /* SceneDelegate.swift */,
 				0917F5BE26C22B27008D959E /* ViewController.swift */,
 				0917F5C026C22B27008D959E /* Main.storyboard */,
+				09096C0626C2581E00917CA3 /* ZoomViewController.swift */,
 				0917F5C326C22B27008D959E /* Assets.xcassets */,
 				0917F5C526C22B27008D959E /* LaunchScreen.storyboard */,
 				0917F5C826C22B27008D959E /* Info.plist */,
@@ -140,6 +143,7 @@
 				0917F5BF26C22B27008D959E /* ViewController.swift in Sources */,
 				0917F5BB26C22B27008D959E /* AppDelegate.swift in Sources */,
 				0917F5BD26C22B27008D959E /* SceneDelegate.swift in Sources */,
+				09096C0726C2581E00917CA3 /* ZoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
