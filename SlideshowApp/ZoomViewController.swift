@@ -20,6 +20,8 @@ class ZoomViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        pausePlay = true
+        
         scrollView2.delegate = self
         scrollView2.maximumZoomScale = 4.0
         scrollView2.minimumZoomScale = 1.0
@@ -35,46 +37,14 @@ class ZoomViewController: UIViewController, UIScrollViewDelegate {
         imageView2.contentMode = UIView.ContentMode.scaleAspectFit
 
         imageView2.isUserInteractionEnabled = true
-        
-// コメントアウト部は拡大縮小可能にするためのコードで、検証途中のためコメントアウトしています
-//        let doubleTap = UITapGestureRecognizer(target:self,action:#selector(ZoomViewController.doubleTap(gesture:)))
-//        doubleTap.numberOfTapsRequired = 2
-//        imageView2.addGestureRecognizer(doubleTap)
     }
 
-//        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-//            return self.imageView2
-//        }
-
-//        func scrollViewDidZoom(_ scrollView: UIScrollView) {
-//           print("end zoom")
-//        }
-
-//        func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-//            print("start zoom")
-//        }
-
-//        @objc func doubleTap(gesture:UITapGestureRecognizer) -> Void {
-//            if(self.scrollView2.zoomScale < 3){
-//                let newScale:CGFloat = self.scrollView2.zoomScale*3
-//                let zoomRect:CGRect = self.zoomForScale(scale:newScale, center:gesture.location(in:gesture.view))
-//                self.scrollView2.zoom(to:zoomRect, animated: true)
-//            } else {
-//                self.scrollView2.setZoomScale(1.0, animated: true)
-//            }
-//        }
-
-//       func zoomForScale(scale:CGFloat, center: CGPoint) -> CGRect{
-//           var zoomRect: CGRect = CGRect()
-//           zoomRect.size.height = self.scrollView2.frame.size.height / scale
-//            zoomRect.size.width = self.scrollView2.frame.size.width  / scale
-//            zoomRect.origin.x = center.x - zoomRect.size.width / 2.0
-//            zoomRect.origin.y = center.y - zoomRect.size.height / 2.0
-//
-//            return zoomRect
-//        }
-
-        override func didReceiveMemoryWarning() {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        pausePlay = false
+    }
+    
+    override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }

@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-5r-sJS">
-                                <rect key="frame" x="20" y="44" width="374" height="752"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="6r6-Ob-wpc" appends="YES" id="p8Q-oL-1jI"/>
-                                </connections>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-R2-bMb">
                                 <rect key="frame" x="191.5" y="823" width="31" height="30"/>
                                 <gestureRecognizers/>
@@ -45,22 +38,29 @@
                                     <action selector="changeTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7e-Qk-Dlf"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-5r-sJS">
+                                <rect key="frame" x="60" y="244" width="294" height="318"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6r6-Ob-wpc" appends="YES" id="p8Q-oL-1jI"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lNG-5r-sJS" secondAttribute="bottom" constant="66" id="7Ad-DP-hlw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lNG-5r-sJS" secondAttribute="bottom" constant="300" id="7Ad-DP-hlw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kai-R2-bMb" secondAttribute="bottom" constant="9" id="7e3-UX-3dc"/>
-                            <constraint firstItem="lNG-5r-sJS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8WU-ff-Ain"/>
                             <constraint firstItem="Kai-R2-bMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dsf-vQ-0eI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xpc-jB-ep0" secondAttribute="bottom" constant="9" id="JvW-jN-h4w"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNG-5r-sJS" secondAttribute="trailing" constant="20" id="UMb-3i-lbA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNG-5r-sJS" secondAttribute="trailing" constant="60" id="UMb-3i-lbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rik-g8-YyD" secondAttribute="bottom" constant="9" id="VsV-Af-YNM"/>
                             <constraint firstItem="rik-g8-YyD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kai-R2-bMb" secondAttribute="trailing" constant="8" symbolic="YES" id="XcB-Uk-ZqQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rik-g8-YyD" secondAttribute="trailing" constant="69" id="Y8R-dp-CHe"/>
                             <constraint firstItem="Kai-R2-bMb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xpc-jB-ep0" secondAttribute="trailing" constant="8" symbolic="YES" id="bTn-rp-BG4"/>
                             <constraint firstItem="Xpc-jB-ep0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="c9Y-3f-cQq"/>
-                            <constraint firstItem="lNG-5r-sJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hP7-wq-V49"/>
+                            <constraint firstItem="lNG-5r-sJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="hP7-wq-V49"/>
+                            <constraint firstItem="lNG-5r-sJS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="y39-Sj-PAJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,7 +68,6 @@
                         <outlet property="imageView" destination="lNG-5r-sJS" id="dmA-nW-nwj"/>
                         <outlet property="playButton" destination="rik-g8-YyD" id="TEU-em-Zag"/>
                         <outlet property="rewindButton" destination="Kai-R2-bMb" id="pXJ-h6-RgJ"/>
-                        <outlet property="timerView" destination="lNG-5r-sJS" id="tLK-Vm-WaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,8 +92,7 @@
                                 <rect key="frame" x="191.5" y="769" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="ImageRewindView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FkA-3J-3P1"/>
-                                    <segue destination="w5C-0h-Dwc" kind="unwind" unwindAction="unwind:" id="cuL-ey-xo3"/>
+                                    <segue destination="w5C-0h-Dwc" kind="unwind" unwindAction="unwind:" id="nrg-lJ-l0n"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehm-tO-UyZ">
