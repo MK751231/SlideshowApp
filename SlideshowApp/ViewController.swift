@@ -10,7 +10,7 @@ import UIKit
 var pausePlay: Bool = false
 var flagPlay: Bool = false
 
-class ViewController: UIViewController, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var rewindButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
@@ -22,10 +22,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     var nowIndex: Int = 0
     var imageArray:[UIImage] = [
-        UIImage(named:"image_01")!,
-        UIImage(named:"image_02")!,
-        UIImage(named:"image_03")!,
-        UIImage(named:"image_04")!
+        UIImage(named:"image_01.jpeg")!,
+        UIImage(named:"image_02.jpeg")!,
+        UIImage(named:"image_03.jpeg")!,
+        UIImage(named:"image_04.jpeg")!
     ]
 
     override func viewDidLoad() {
